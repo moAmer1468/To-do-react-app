@@ -1,7 +1,9 @@
 # Getting Started with Create React App
 ![Project preview images](todoEmpty.png)
 
-
+### My Awesome Project
+ Welcome to my awesome Project!
+ ![steps](toDoApplication.png)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
