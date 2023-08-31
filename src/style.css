@@ -1,100 +1,126 @@
-body {
-  margin: 0;
-  font-family: 'Montserrat',sans-serif;
-  font-family: 'Roboto Mono',
-  monospace;
- 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-font{
-    font-family: 'Montserrat', sans-serif;
-     font-family: 'Roboto Mono',monospace;
-  font-family: 'Almarai', sans-serif;
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  background-color: rgb(81, 81, 187);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Almarai', sans-serif;
+    overflow: hidden;
 }
-*{box-sizing: border-box;}
+:root{
+    --containerBackground:#FFFFFF;
+    --headingColor:#025CC8;
+    --borderInputColor:#F5AEA5;
+    --inputBackgroundColor:#878787;
+    --inputBackgroundColor:#FF5945;
+    --numberOfTasks:#025EC9;
+
+
+}
+.main-background{
+    
+    background-color:#232A70 ;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    color: var(--headingColor);
+        text-align: center;
+            padding: 20px;
+            letter-spacing: 2px;
+}
 .container{
-  width: 60%;
-  margin: 10% auto;
-}
-.list-items{
-  background-color: #fff;
-  color: rgb(78, 78, 142);
-}
-.list-items p{
-color: red;
-text-align: center;
-padding: 10px 0px;
-margin: 0px;
-}
-.list-items div span{
-  display: inline-block;
-padding: 10px 0;
-text-align: center;
-font-size: 20px;
-/* border: .2px solid #ccc; */
-}
-.list-items span.name,
-form input[type='submit'],
-.input-name
-
-{
-width: 50%;
-}
-.list-items span.age ,.input-age
-{
-width: 30%;
+    margin: auto auto;
+    width: 50vw;
+    background-color: var(--containerBackground);
+    padding: 10px;
+        border: 1px solid var(--inputBackgroundColor);
+        max-width: 1200px;
+            /* Set an appropriate value */
+            margin: 0 auto;
 }
 
-.list-items span.add,.input-add{
-  width: 20%;}
-.title{
-  color: white;
-  text-align: center;
-  display: inline-block;
-  border: 2px solid white;
-  background-color: black;
-}
-.header-age{
-  width: 30%;
-}
-.header-name{
-  width: 50%;
-}
-.header-action{
-  width: 20%;
-}
-form{display: flex;}
+.input-style{
 
-.input-add,.input-name,.input-age{
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-  border: 2px solid wheat;
-  outline: 2px solid white;
-  height: 20px;
-  padding: 20px;
-  text-align: center;
+    flex: 1;
+    background-color: var(--inputBackgroundColor);
+        padding: 10px;
+        border: none;
+        height: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        outline: none;
+            /* Remove default outline */
+        
+            /* Add transition for smooth animation */
+            transition: border-color 0.3s;
 }
-.special{
-  width: 20% !important;
-  cursor: pointer;
+.input-style:hover,
+.input-style:focus{
+ outline-color:none ;
+ border-color: transparent;
+background-color: var(--inputBackgroundColor);
+color: black;
+border-color: transparent;
+    /* Remove border */
 }
-.add{
-  color: red;
-  cursor: pointer;
+.edit{
+    background-color: white;
+}
+.input-style::placeholder{
+    color:var(--containerBackground)
+}
+
+.form{
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 1px solid black;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 25%;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.hover{
+    background: var(--borderInputColor);
+    color: black;
+}
+.todo-style{
+        display: grid;
+        grid-template-columns: 75% 25% 25%;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid black;
+       
+        padding-right: 30px;
+}
+.todo-style:nth-last-child(2){
+         border-bottom: 1px solid transparent;}
+.todo-style:nth-child(3){
+            border-top: 1px solid transparent;
+            }
+
+.icon-style{
+        padding-right: 10px;
+        color: #025EC9;
+}
+
+.footer{
+    color: var(--headingColor);
+        background-color: var(--borderInputColor);
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid var(--borderInputColor);
 }
